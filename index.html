@@ -1,7 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+	 <script>
+    window.addEventListener('beforeunload', function(event) {
+      event.preventDefault(); // Cancela a saída padrão do navegador
+      event.returnValue = ''; // Necessário para o Chrome e o Firefox
+      // Exibe uma mensagem de confirmação ao usuário
+      var message = 'Você será redirecionado para outra página. Tem certeza que deseja sair?';
+      return message;
+    });
+  </script>
 	<!--vtbAnalytics-->
 		<script id="hotmart_launcher_script">
 			(function(l,a,u,n,c,h,e,r){l['HotmartLauncherObject']=c;l[c]=l[c]||function(){
